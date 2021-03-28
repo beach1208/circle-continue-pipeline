@@ -22,7 +22,6 @@ jobs:
                   - image: alpine
                 steps:
                   - run: echo "Hello from another workflow!!!"
-                  - run: echo "my test"
             EOD
       - run:
           name: Build a valid JSON message using jq and write it to /tmp/continue-body.json
