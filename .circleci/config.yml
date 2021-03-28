@@ -17,7 +17,7 @@ jobs:
             version: 2
 
             jobs:
-              build2:
+              build:
                 docker:
                   - image: alpine
                 steps:
