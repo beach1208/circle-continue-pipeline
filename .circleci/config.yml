@@ -3,7 +3,7 @@ version: 2.1
 setup: true
 
 jobs:
-  build:
+  build1:
     docker:
       - image: alpine
     steps:
@@ -17,7 +17,7 @@ jobs:
             version: 2
 
             jobs:
-              build:
+              build2:
                 docker:
                   - image: alpine
                 steps:
@@ -39,3 +39,8 @@ jobs:
               -H "Content-Type: application/json" \
               --data-binary @/tmp/continue-body.json \
               https://circleci.com/api/v2/pipeline/continue
+
+workflows:
+  setup:
+    jobs:
+      - build1
